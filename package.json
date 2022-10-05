@@ -19,7 +19,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@vueuse/core": "^9.3.0",
-    "bootstrap": "^5.2.1",
+    "bootstrap": "^5.2.2",
     "dashjs": "^4.5.0",
     "highlight.js": "^11.6.0",
     "katex": "^0.16.2",
