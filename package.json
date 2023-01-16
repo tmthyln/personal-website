@@ -50,7 +50,7 @@
     "@yankeeinlondon/link-builder": "^1.0.5",
     "@yankeeinlondon/meta-builder": "^1.0.6",
     "cypress": "^10.7.0",
-    "eslint": "^8.25.0",
+    "eslint": "^8.32.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-vue": "^9.6.0",
     "jsdom": "^20.0.1",
