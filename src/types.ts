@@ -1,2 +1,2 @@
 
-export type BootstrapClass = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+export type BulmaColor = 'primary' | 'link' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';

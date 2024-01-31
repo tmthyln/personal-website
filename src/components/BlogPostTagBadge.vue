@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import type {BootstrapClass} from "@/types";
+import type {BulmaColor} from "@/types";
 import {computed} from "vue";
 
 const props = defineProps<{
   type?: string,
 }>();
 
-const badgeClass = computed<BootstrapClass>(() => {
+const badgeClass = computed<BulmaColor>(() => {
   switch (props.type) {
     case "cs":
     case "julia":
       return 'primary';
     case "umd":
-      return 'warning';
+      return 'danger';
     case "hawaii":
     case "travel":
       return 'success';
     case "math":
       return 'info';
     default:
-      return 'secondary';
+      return 'link';
   }
 });
 </script>
 
 <template>
   <span
-      class="badge rounded-pill user-select-none"
-      :class="`text-bg-${badgeClass || 'primary'}`">
+      class="tag is-rounded"
+      :class="`is-${badgeClass}`">
     {{ type }}
   </span>
 </template>

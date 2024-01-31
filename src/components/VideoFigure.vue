@@ -13,10 +13,9 @@ onMounted(() => player.initialize(videoElement.value, props.src, false));
 </script>
 
 <template>
-  <figure class="figure p-3 d-flex flex-column align-items-center">
-    <video ref="videoElement" class="figure-img w-100 w-lg-75 w-xxl-50 img-fluid rounded" preload="metadata" controls></video>
-    <figcaption
-        class="figure-caption">
+  <figure class="p-3 is-flex-direction-column is-align-items-center">
+    <video ref="videoElement" preload="metadata" controls></video>
+    <figcaption>
       {{ caption }}
     </figcaption>
   </figure>

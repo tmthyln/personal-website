@@ -5,10 +5,12 @@ import {createHead} from "@vueuse/head";
 import App from "./App.vue";
 import router from "./router";
 
-import 'bootstrap';
+import "../node_modules/bulma/bulma.sass"
 
 import 'katex/dist/katex.css';
-import 'highlight.js/styles/atom-one-dark-reasonable.css'
+import 'highlight.js/styles/atom-one-light.css';
+
+import './assets/styles/overrides.css';
 
 // fontawesome
 import {dom, library} from "@fortawesome/fontawesome-svg-core";

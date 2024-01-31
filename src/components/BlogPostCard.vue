@@ -31,27 +31,27 @@ const isRecent = computed(() => {
 </script>
 
 <template>
-  <div class="card text-bg-dark border">
-    <div class="card-body">
-      <RouterLink v-if="link" :to="link" class="text-decoration-none">
-        <h3 class="card-title">
+  <div class="card is-bordered">
+    <div class="card-content">
+      <RouterLink v-if="link" class="title" :to="link">
+        <h2 class="title is-3 is-flex is-align-items-center">
           {{ formattedTitle }}
-          <span v-if="isRecent" class="badge text-bg-light p-1 ps-2 pe-2 ms-2">New</span>
-        </h3>
+          <span v-if="isRecent" class="tag is-medium is-success ml-3">New</span>
+        </h2>
       </RouterLink>
-      <h6 class="card-subtitle mb-2 text-muted">
-        <small class="user-select-all">{{ parsedDate.toLocaleDateString() }}</small>
-      </h6>
-      <div class="card-text mb-2" v-if="tags">
+      <div class="subtitle is-5 mb-2">
+        <small>{{ parsedDate.toLocaleDateString() }}</small>
+      </div>
+      <div class="mb-2" v-if="tags">
         <BlogPostTagBadge
             v-for="tag in tags" :key="tag"
-            class="me-1"
+            class="mr-1"
             :type="tag.toLocaleLowerCase()">
           stuff in slot
         </BlogPostTagBadge>
       </div>
-      <p class="card-text">{{ description }}</p>
-      <RouterLink v-if="link" :to="link" class="card-link text-decoration-none">
+      <p>{{ description }}</p>
+      <RouterLink v-if="link" :to="link">
         <em>Read full post</em>
       </RouterLink>
     </div>
@@ -59,5 +59,4 @@ const isRecent = computed(() => {
 </template>
 
 <style scoped>
-
 </style>

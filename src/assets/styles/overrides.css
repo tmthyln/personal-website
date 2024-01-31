@@ -1,0 +1,6 @@
+pre code span.number {
+    display: inline !important;
+    font-size: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

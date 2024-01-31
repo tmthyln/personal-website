@@ -42,11 +42,11 @@ export default defineConfig({
                 md.use(anchor, {
                     level: 2,
                     permalink: anchor.permalink.linkAfterHeader({
-                        class: 'ps-1 stretched-link text-decoration-none link-primary',
-                        symbol: '🔗',
+                        class: 'ml-2 is-primary',
+                        symbol: '<i class="fa-solid fa-link"></i>',
                         assistiveText: (title: string) => `Permalink to "${title}"`,
-                        visuallyHiddenClass: 'visually-hidden',
-                        wrapper: ['<span class="position-relative d-flex align-items-baseline">', '</span>'],
+                        visuallyHiddenClass: 'is-sr-only',
+                        wrapper: ['<span class="is-flex is-align-items-self-start">', '</span>'],
                     }),
                 });
 

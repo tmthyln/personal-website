@@ -1,39 +1,49 @@
+<script setup lang="ts">
+import {ref} from "vue";
+
+const expandMenu = ref(false);
+</script>
+
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom border-1 border-light">
-    <div class="container-fluid">
-      <RouterLink to="/" class="navbar-brand">
-        <img src="../assets/images/personal.svg" alt="Timothy Lin's logo" width="30" height="30"
-             class="d-inline-block align-text-top me-1">
-        Timothy Lin
+  <nav class="navbar is-primary is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <RouterLink class="navbar-item" to="/" @click="expandMenu = false">
+        <img class="mr-2" src="../assets/images/personal.svg" width="30" height="30" alt="Timothy Lin's logo">
+        <span>Timothy Lin</span>
       </RouterLink>
 
-      <button
-          class="navbar-toggler" type="button"
-          data-bs-toggle="collapse" data-bs-target="#navbarItems"
-          aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarItems">
-        <div class="navbar-nav">
-          <RouterLink to="/posts" class="nav-link">Blog</RouterLink>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="expandMenu = !expandMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Places
+    <div class="navbar-menu" :class="{'is-active': expandMenu}">
+      <div class="navbar-start">
+
+        <RouterLink class="navbar-item" to="/posts" @click="expandMenu = false">
+          Blog
+        </RouterLink>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <p class="navbar-link">
+            Places
+          </p>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/tmthyln/">
+              <i class="fab fa-fw fa-github-square" aria-hidden="true"></i> GitHub
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://github.com/tmthyln/">
-                <i class="fab fa-fw fa-github-square" aria-hidden="true"></i> GitHub
-              </a></li>
-              <li><a class="dropdown-item" href="https://www.linkedin.com/in/tmthyln/">
-                <i class="fab fa-fw fa-linkedin" style="color: #0077B5" aria-hidden="true"></i> LinkedIn
-              </a></li>
-              <li><a class="dropdown-item" href="https://work.timothylin.me/">
-                <i class="fas fa-fw fa-pen-nib" aria-hidden="true"></i> Polywork
-              </a></li>
-            </ul>
+            <a class="navbar-item" href="https://www.linkedin.com/in/tmthyln/">
+              <i class="fab fa-fw fa-linkedin" style="color: #0077B5" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a class="navbar-item" href="https://work.timothylin.me/">
+              <i class="fas fa-fw fa-pen-nib" aria-hidden="true"></i> Polywork
+            </a>
           </div>
         </div>
+
       </div>
     </div>
   </nav>
