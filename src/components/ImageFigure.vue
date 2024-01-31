@@ -42,11 +42,19 @@ const expandedFigureStyle = {
         class="figure p-3 d-flex flex-column align-items-center"
         :class="{'position-fixed': expandedView}"
         :style="expandedView ? expandedFigureStyle : ''">
+
       <img
+          v-if="src"
           class="figure-img img-fluid rounded w-100"
           :class="{'w-lg-75 w-xxl-50': !expandedView}"
           @click="openExpandedView"
           :src="src" :alt="`Image with caption '${caption}'`"/>
+      <slot
+          v-else
+          class="figure-img img-fluid rounded w-100"
+          :class="{'w-lg-75 w-xxl-50': !expandedView}"
+          @click="openExpandedView"/>
+
       <figcaption
           class="figure-caption w-100"
           :class="{'w-lg-75 w-xxl-50': !expandedView}">
