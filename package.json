@@ -41,7 +41,7 @@
     "@vueuse/head": "^0.9.8",
     "@yankeeinlondon/code-builder": "^1.0.7",
     "@yankeeinlondon/link-builder": "^1.0.5",
-    "@yankeeinlondon/meta-builder": "^1.0.6",
+    "@yankeeinlondon/meta-builder": "^1.4.0",
     "sass": "^1.57.1",
     "typescript": "~4.8.4",
     "vite": "^3.1.8",
