@@ -1,20 +1,20 @@
 <script setup lang="ts">
 // @ts-ignore
-import {frontmatter as bogosortingFrontmatter} from './Bogosorting.md';
+import {frontmatter as bogosortingFrontmatter} from './bogosorting.md';
 // @ts-ignore
-import {frontmatter as turnLeftFrontmatter} from './TurnLeftAtNextPrime.md';
+import {frontmatter as turnLeftFrontmatter} from './turn-left-at-next-prime.md';
 // @ts-ignore
-import {frontmatter as hawaiiFirstHundredFrontmatter} from './HawaiiFirstHundredHours.md';
+import {frontmatter as hawaiiFirstHundredFrontmatter} from './hawaii-first-hundred-hours.md';
 // @ts-ignore
-import {frontmatter as fancyMealFrontmatter} from './FancyMeal.md';
+import {frontmatter as fancyMealFrontmatter} from './fancy-meal.md';
 
 import BlogPostCard from "@/components/BlogPostCard.vue";
 
 const posts = [
-  {frontmatter: fancyMealFrontmatter, link: '/posts/FancyMeal'},
-  {frontmatter: hawaiiFirstHundredFrontmatter, link: '/posts/HawaiiFirstHundredHours'},
-  {frontmatter: turnLeftFrontmatter, link: '/posts/TurnLeftAtNextPrime'},
-  {frontmatter: bogosortingFrontmatter, link: '/posts/Bogosorting'},
+  {frontmatter: fancyMealFrontmatter, link: '/posts/fancy-meal'},
+  {frontmatter: hawaiiFirstHundredFrontmatter, link: '/posts/hawaii-first-hundred-hours'},
+  {frontmatter: turnLeftFrontmatter, link: '/posts/turn-left-at-next-prime'},
+  {frontmatter: bogosortingFrontmatter, link: '/posts/bogosorting'},
 ];
 </script>
 
