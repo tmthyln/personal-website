@@ -25,11 +25,12 @@ const badgeClass = computed<BulmaColor>(() => {
 </script>
 
 <template>
-  <span
+  <router-link
       class="tag is-rounded"
-      :class="`is-${badgeClass}`">
+      :class="`is-${badgeClass}`"
+      :to="`/tags/${type}`">
     {{ type }}
-  </span>
+  </router-link>
 </template>
 
 <style scoped>
