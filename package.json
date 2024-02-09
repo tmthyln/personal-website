@@ -28,6 +28,7 @@
     "markdown-it-texmath": "^1.0.0",
     "particles.js": "^2.0.0",
     "pinia": "^2.0.30",
+    "vite-plugin-compile-time": "^0.2.1",
     "vue": "^3.2.44"
   },
   "devDependencies": {
@@ -49,6 +50,7 @@
     "vite-plugin-md": "^0.20.4",
     "vite-plugin-pages": "^0.27.1",
     "vite-plugin-pages-sitemap": "^1.4.0",
+    "vite-plugin-rss": "^0.0.6",
     "vite-plugin-vue-layouts": "^0.7.0",
     "vitest": "^0.25.1",
     "vue-router": "^4.1.6",

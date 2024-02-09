@@ -6,6 +6,7 @@ import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
 import Markdown from "vite-plugin-md";
 import generateSitemap from "vite-plugin-pages-sitemap";
+import CompileTime from 'vite-plugin-compile-time';
 import code from '@yankeeinlondon/code-builder';
 import meta from '@yankeeinlondon/meta-builder';
 //import link from '@yankeeinlondon/link-builder';
@@ -81,6 +82,7 @@ export default defineConfig({
                 md.use(require('markdown-it-image-figures'));
             },
         }),
+        CompileTime(),
         Pages({
             extensions: ['vue', 'ts', 'js', 'md'],
             onRoutesGenerated: routes => (generateSitemap({
