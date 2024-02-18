@@ -16,6 +16,10 @@ const placeLinks = [
         text: 'Polywork',
         link: 'https://work.timothylin.me/',
         icon: '<i class="fas fa-fw fa-pen-nib" aria-hidden="true"></i>',
+    }, {
+        text: 'Instagram',
+        link: 'https://www.instagram.com/tmthyln/',
+        icon: '<i class="fab fa-square-instagram" aria-hidden="true"></i>'
     },
 ];
 </script>
