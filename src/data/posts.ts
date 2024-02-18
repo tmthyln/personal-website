@@ -1,5 +1,6 @@
 
 export default await Promise.all([
+    '../pages/posts/rigor-sacrifice.md',
     '../pages/posts/fancy-meal.md',
     '../pages/posts/hawaii-first-hundred-hours.md',
     '../pages/posts/turn-left-at-next-prime.md',
