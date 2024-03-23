@@ -1,8 +1,8 @@
 ---
-title: 'Turn Left at the Next Prime | Blog Post'
+title: Turn Left at the Next Prime
 description: 
   What happens when we traverse the grid of Gaussian integers by turning left whenever we hit a Gaussian prime? This is a Julia implementation of a simulation originally in Python (but was too slow for interactive exploration) of an idea originally brought up on Stack Overflow. Lots of interesting images.
-date: '2021-01-18'
+date: 2021-01-18
 tags:
   - julia
   - math
@@ -10,7 +10,7 @@ tags:
 ---
 
 <script setup lang="ts">
-import ImageFigure from "../../components/ImageFigure.vue";
+import ImageFigure from "../components/ImageFigure.vue";
 </script>
 
 # Turn Left at the Next Prime

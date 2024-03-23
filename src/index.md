@@ -1,6 +1,3 @@
----
-title: 'Timothy Lin'
----
 
 # Hey there!
 
@@ -9,6 +6,7 @@ I'm interested in why and when deep learning works (its inductive biases),
 empirically investigating curious properties of neural networks, and
 effective visualizations and explanations (or interpretability).
 I've also done some work with graph analytics and visualization.
+
 
 ## What I'm Currently Working On
 

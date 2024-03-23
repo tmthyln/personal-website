@@ -6,6 +6,8 @@ const props = defineProps<{
   type?: string,
 }>();
 
+type BulmaColor = 'primary' | 'link' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+
 const badgeClass = computed<BulmaColor>(() => {
   switch (props.type) {
     case "cs":
@@ -25,12 +27,12 @@ const badgeClass = computed<BulmaColor>(() => {
 </script>
 
 <template>
-  <router-link
+  <a
       class="tag is-rounded"
       :class="`is-${badgeClass}`"
-      :to="`/tags/${type}`">
+      :href="`/tags/${type}`">
     {{ type }}
-  </router-link>
+  </a>
 </template>
 
 <style scoped>

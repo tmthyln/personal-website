@@ -11,7 +11,7 @@ tags:
 # A Fancy Meal
 
 <script setup lang="ts">
-import ImageFigure from "../../components/ImageFigure.vue";
+import ImageFigure from "../components/ImageFigure.vue";
 </script>
 
 During my transition to O'ahu, 

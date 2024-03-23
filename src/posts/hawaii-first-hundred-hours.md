@@ -1,5 +1,5 @@
 ---
-title: Hawaii, First 100 Hours
+title: 'Hawaii, First 100 Hours'
 date: 2022-10-02
 description:
   How I spent my first 100 hours on O'ahu, HI. Activities included flying, walking, talking, and driving. I visited some beaches, went swimming for the first time in years, drive around half the island, and did a lot of chillaxing. 
@@ -9,12 +9,12 @@ tags:
   - timeline
 ---
 
-<script setup lang="ts">
-import ImageFigure from "../../components/ImageFigure.vue";
-import VideoFigure from "../../components/VideoFigure.vue";
-</script>
-
 # Hawaii, First 100 Hours
+
+<script setup lang="ts">
+import ImageFigure from "../components/ImageFigure.vue";
+import VideoFigure from "../components/VideoFigure.vue";
+</script>
 
 I recently got the opportunity to move to Hawaii, to the island of O'ahu for work, just for a year. It's been a long time since I've "blogged," either here or on other websites that shall not be named. Quite a few people asked if I would give updates on my life in the islands, so instead of shoving pictures down their throat every day/week (which is what I'm doing with my family), I thought I'd restart this blog with Hawaii updates!
 
@@ -22,7 +22,7 @@ So, here's my first 100 hours on the island.
 
 [[toc]]
 
-## Hour 0: Arrival (yes, 0-indexed, although this may have resulted in some off-by-one errors) {Sept. 28 @ 1300}
+## Hour 0: Arrival (yes, 0-indexed, although this may have resulted in some off-by-one errors) [Sept. 28 @ 1300]
 
 (I have basically no pictures from then. Either it was just endless ocean, or I was taking a video for one of my seatmates.)
 
@@ -71,7 +71,7 @@ After relaxing for a bit, I walked around in the nearby area between Ala Moana R
 
 At this point, it's evening becoming night here in Hawaii, but already the middle of the night back in Maryland, so I basically just went to sleep.
 
-## Hour 16: Awake way too early {Sept. 29 @ 0500}
+## Hour 16: Awake way too early [Sept. 29 @ 0500]
 
 But my biological clock just wouldn't snooze. I actually don't remember what I did, but I'm assuming I got up and milled around my room until a normal wake-up time.
 
@@ -156,7 +156,7 @@ Unfortunately, at least at the one I went to, no bento boxes. It was a little sa
 
 ## Hour 31: Dinner at last! And then sleep
 
-## Hour 43: Breakfast again {Sept. 30 @ 0800}
+## Hour 43: Breakfast again [Sept. 30 @ 0800]
 
 Same breakfast.
 
@@ -184,7 +184,7 @@ I didn't have a time piece while in the water (my watch ran out of battery a whi
 
 Although I'm not starting work until Monday, I had some other loose ends and things to work on. I also needed to start taking a look at my financial situation to make sure I'll be living within my means.
 
-## Hour 67: Breakfast again again {Oct. 1 @ 0800}
+## Hour 67: Breakfast again again [Oct. 1 @ 0800]
 
 Same thing.
 
