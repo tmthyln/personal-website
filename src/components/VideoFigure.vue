@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import {MediaPlayer} from 'dashjs';
+import dashjs from 'dashjs';
 import {onMounted, ref} from "vue";
+
+const MediaPlayer = dashjs.MediaPlayer
 
 const props = defineProps<{
   src: string,
