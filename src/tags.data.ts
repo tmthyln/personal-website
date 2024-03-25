@@ -1,12 +1,17 @@
-import PostsData from './posts.data.ts'
-
-const allPosts = await PostsData.load()
+import matter from 'gray-matter';
+import {globSync} from 'glob';
+import fs from 'node:fs';
 
 export default {
     load() {
-        return allPosts
-            .reduce((tagFreq, post) => {
-                (post.frontmatter.tags ?? []).forEach(tag => {
+        return (globSync('posts/*.md'))
+            .map(filename => {
+                const file = fs.readFileSync(filename, 'utf8')
+                const { data } = matter(file)
+                return data.tags ?? []
+            })
+            .reduce((tagFreq, tags) => {
+                tags.forEach(tag => {
                     if (tagFreq.has(tag)) {
                         tagFreq.set(tag, tagFreq.get(tag) + 1)
                     } else {

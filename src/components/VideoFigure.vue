@@ -1,22 +1,38 @@
 <script setup lang="ts">
-import dashjs from 'dashjs';
-import {onMounted, ref} from "vue";
-
-const MediaPlayer = dashjs.MediaPlayer
+import videojs from 'video.js'
+import {onBeforeUnmount, onMounted, ref} from "vue";
+import 'video.js/dist/video-js.css';
 
 const props = defineProps<{
   src: string,
   caption: string,
 }>();
 
-const player = MediaPlayer().create();
+const player = ref();
 const videoElement = ref<HTMLVideoElement>();
-onMounted(() => player.initialize(videoElement.value, props.src, false));
+onMounted(() => {
+    player.value = videojs(videoElement.value, {
+        autoplay: false,
+        controls: true,
+        sources: [
+            {
+                src: props.src,
+            },
+        ],
+    }, () => {
+        console.log('onPlayerReady', player.value)
+    })
+});
+onBeforeUnmount(() => {
+    if (player.value) {
+        player.value.dispose()
+    }
+})
 </script>
 
 <template>
   <figure class="p-3 is-flex-direction-column is-align-items-center">
-    <video ref="videoElement" preload="metadata" controls></video>
+    <video ref="videoElement" preload="metadata"/>
     <figcaption>
       {{ caption }}
     </figcaption>
