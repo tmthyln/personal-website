@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress'
+import markdownItFootnote from 'markdown-it-footnote'
+import markdownItAnchor from 'markdown-it-anchor'
+import slugify from '@sindresorhus/slugify'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,7 +16,25 @@ export default defineConfig({
         ['script', {src: '/lib/graphcomment.js', type: 'text/javascript'}, ''],
     ],
     markdown: {
+        toc: {
+            listTag: 'ol',
+        },
+        anchor: {
+            permalink: markdownItAnchor.permalink.linkAfterHeader({
+                class: 'ml-2 is-link',
+                space: true,
+                placement: 'before',
+                assistiveText: (title) => `Permalink to "${title}"`,
+                visuallyHiddenClass: 'is-sr-only',
+                wrapper: ['<span class="is-flex is-align-items-self-start">', '</span>'],
+            }),
+            level: 2,
+            slugify,
+        },
         math: true,
+        config: (md) => {
+            md.use(markdownItFootnote)
+        },
     },
     sitemap: {
         hostname: 'https://timothylin.me',
