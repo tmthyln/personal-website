@@ -1,12 +1,16 @@
 
-# Hey there!
-
-I'm a computer scientist researching machine learning.
-I'm interested in why and when deep learning works (its inductive biases),
-empirically investigating curious properties of neural networks, and
-effective visualizations and explanations (or interpretability).
-I've also done some work with graph analytics and visualization.
-
+<section class="hero is-info mb-6">
+  <div class="hero-body">
+    <p class="title">Hey there!</p>
+    <p class="subtitle">
+      I'm a computer scientist researching machine learning.
+      I'm interested in why and when deep learning works (its inductive biases),
+      empirically investigating curious properties of neural networks, and
+      effective visualizations and explanations (or interpretability).
+      I've also done some work with graph analytics and visualization.
+    </p>
+  </div>
+</section>
 
 ## What I'm Currently Working On
 
