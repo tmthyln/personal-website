@@ -1,0 +1,31 @@
+
+.custom-block {
+    @extend .message;
+    @extend .mb-3;
+}
+.custom-block-title {
+    @extend .message-header;
+}
+div.custom-block > :not(.custom-block-title) {
+    @extend .message-body;
+    border-radius: 0;
+}
+div.custom-block > * {
+  margin-top: 0 !important;
+}
+div.custom-block > :not(:last-child) {
+    margin-bottom: 0 !important;
+}
+
+.custom-block.info {
+    @extend .is-info;
+}
+.custom-block.tip {
+    @extend .is-info;
+}
+.custom-block.warning {
+    @extend .is-warning;
+}
+.custom-block.danger {
+    @extend .is-danger;
+}
