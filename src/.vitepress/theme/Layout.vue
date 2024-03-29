@@ -2,6 +2,8 @@
 import {Content, useData} from "vitepress";
 import {computed, onMounted, ref, watch} from "vue";
 import {data as lastCopyrightYear} from './build-year.data.ts';
+import {faGithubSquare, faLinkedin, faSquareInstagram} from "@fortawesome/free-brands-svg-icons";
+import {faPenNib} from "@fortawesome/free-solid-svg-icons";
 
 const expandMenu = ref(false);
 
@@ -9,19 +11,28 @@ const placeLinks = [
     {
         text: 'GitHub',
         link: 'https://github.com/tmthyln/',
-        icon: '<i class="fab fa-fw fa-github-square" aria-hidden="true">',
+        icon: {
+            icon: faGithubSquare,
+        },
     }, {
         text: 'LinkedIn',
         link: 'https://www.linkedin.com/in/tmthyln/',
-        icon: '<i class="fab fa-fw fa-linkedin" style="color: #0077B5" aria-hidden="true"></i>',
+        icon: {
+            icon: faLinkedin,
+            style: 'color: #0077B5',
+        },
     }, {
         text: 'Polywork',
         link: 'https://work.timothylin.me/',
-        icon: '<i class="fas fa-fw fa-pen-nib" aria-hidden="true"></i>',
+        icon: {
+            icon: faPenNib,
+        },
     }, {
         text: 'Instagram',
         link: 'https://www.instagram.com/tmthyln/',
-        icon: '<i class="fab fa-square-instagram" aria-hidden="true"></i>'
+        icon: {
+            icon: faSquareInstagram,
+        },
     },
 ];
 
@@ -82,10 +93,10 @@ watch(
               Places
             </p>
 
-            <div class="navbar-dropdown">
+            <div class="navbar-dropdown has-background-primary">
               <a v-for="place in placeLinks" :key="place.link" class="navbar-item" :href="place.link">
-                <div class="is-flex is-align-items-center">
-                  <span class="icon" v-html="place.icon"></span>
+                <div class="is-flex is-align-items-center has-text-dark">
+                  <FontAwesomeIcon class="icon mr-2 fa-xs" v-bind="place.icon"/>
                   <span>{{ place.text }}</span>
                 </div>
               </a>
@@ -114,5 +125,4 @@ watch(
 </template>
 
 <style scoped>
-
 </style>
