@@ -8,6 +8,19 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
     assignees:
       - "tmthyln"
+    labels: ["dependencies", "javascript"]
+    groups:
+      icons:
+        patterns:
+          - "@fortawesome/*"
+      vue:
+        patterns:
+          - "vue"
+          - "vitepress"
+          - "@vue/tsconfig"
+      md:
+        patterns:
+          - "markdown-it-*"
