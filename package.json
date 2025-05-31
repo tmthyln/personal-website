@@ -21,13 +21,13 @@
     "video.js": "^8.10.0"
   },
   "devDependencies": {
-    "@vue/tsconfig": "^0.5.1",
+    "@vue/tsconfig": "^0.7.0",
     "glob": "^11.0.2",
     "gray-matter": "^4.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "sass": "^1.72.0",
     "typescript": "^5.4.3",
-    "vitepress": "^1.0.1",
+    "vitepress": "^1.6.3",
     "vue": "^3.4.21"
   }
 }
