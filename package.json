@@ -16,7 +16,7 @@
     "@sindresorhus/slugify": "^2.2.1",
     "@vueuse/core": "^10.9.0",
     "bulma": "^1.0.0",
-    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-anchor": "^9.2.0",
     "markdown-it-footnote": "^4.0.0",
     "video.js": "^8.10.0"
   },
