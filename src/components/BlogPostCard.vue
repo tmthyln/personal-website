@@ -5,7 +5,7 @@ import BlogPostTagBadge from "./BlogPostTagBadge.vue";
 const props = defineProps<{
     title: string,
     date: Date | string,
-    description: string,
+    description: string | null | undefined,
     tags?: string[],
     link?: string,
 }>();
@@ -50,7 +50,7 @@ const isRecent = computed(() => {
           stuff in slot
         </BlogPostTagBadge>
       </div>
-      <p>{{ description }}</p>
+      <p>{{ description ?? '' }}</p>
       <a v-if="link" :href="link">
         <em>Read full post</em>
       </a>
