@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.8.1",
-    "glob": "^11.0.3",
+    "glob": "^11.1.0",
     "gray-matter": "^4.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "sass": "^1.72.0",
