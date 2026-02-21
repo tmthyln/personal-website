@@ -3,7 +3,6 @@ import {Content, useData} from "vitepress";
 import {computed, onMounted, ref, watch} from "vue";
 import {data as lastCopyrightYear} from './build-year.data.ts';
 import {faGithubSquare, faLinkedin, faSquareInstagram} from "@fortawesome/free-brands-svg-icons";
-import {faPenNib} from "@fortawesome/free-solid-svg-icons";
 
 const expandMenu = ref(false);
 
@@ -20,12 +19,6 @@ const placeLinks = [
         icon: {
             icon: faLinkedin,
             style: 'color: #0077B5',
-        },
-    }, {
-        text: 'Polywork',
-        link: 'https://work.timothylin.me/',
-        icon: {
-            icon: faPenNib,
         },
     }, {
         text: 'Instagram',
