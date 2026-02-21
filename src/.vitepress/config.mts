@@ -16,6 +16,7 @@ export default defineConfig({
         ['script', {src: '/lib/graphcomment.js', type: 'text/javascript'}, ''],
     ],
     markdown: {
+        headers: true,
         toc: {
             listTag: 'ol',
         },
