@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import videojs from 'video.js'
 import {onBeforeUnmount, onMounted, ref} from "vue";
-import 'video.js/dist/video-js.css';
 
 const props = defineProps<{
   src: string,
@@ -10,17 +9,18 @@ const props = defineProps<{
 
 const player = ref();
 const videoElement = ref<HTMLVideoElement>();
+
 onMounted(() => {
     player.value = videojs(videoElement.value, {
         autoplay: false,
         controls: true,
+        fluid: true,
         sources: [
             {
                 src: props.src,
+                type: props.src.endsWith('.mpd') ? 'application/dash+xml' : undefined,
             },
         ],
-    }, () => {
-        console.log('onPlayerReady', player.value)
     })
 });
 onBeforeUnmount(() => {
@@ -32,13 +32,15 @@ onBeforeUnmount(() => {
 
 <template>
   <figure class="p-3 is-flex-direction-column is-align-items-center">
-    <video ref="videoElement" preload="metadata"/>
+    <div data-vjs-player>
+      <video ref="videoElement" class="video-js vjs-default-skin" preload="metadata"/>
+    </div>
     <figcaption>
       {{ caption }}
     </figcaption>
   </figure>
 </template>
 
-<style scoped>
-
+<style>
+@import "video.js/dist/video-js.css";
 </style>
