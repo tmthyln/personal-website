@@ -20,11 +20,30 @@
 
 ## What I've Worked on in the Past
 
-- open source suite of (partially complete) packages in the [Julia language](https://julialang.org/) for working with
-  the Chinese language (hosted under the JuliaCJK group in GitHub):
-    - [ZhuyinPinyin.jl](https://github.com/JuliaCJK/ZhuyinPinyin.jl)
-    - [CEDICT.jl](https://github.com/JuliaCJK/CEDICT.jl),
-    - [CJKFrequencies.jl](https://github.com/JuliaCJK/CJKFrequencies.jl), and
-    - [IDSGraphs.jl](https://github.com/JuliaCJK/IDSGraphs.jl),
-    - which were intended to be combined in [UnifiedChineseDictionary.jl](https://github.com/JuliaCJK/UnifiedChineseDictionary.jl).
-- benchmark for deep learning-based approaches to learning over tabular datasets
+<div class="columns is-multiline">
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <h3 class="title is-5">JuliaCJK Packages</h3>
+        <p>
+          An open source suite of packages in the <a href="https://julialang.org/">Julia language</a> for working with the Chinese language, hosted under the JuliaCJK group on GitHub:
+          <a href="https://github.com/JuliaCJK/ZhuyinPinyin.jl">ZhuyinPinyin.jl</a>,
+          <a href="https://github.com/JuliaCJK/CEDICT.jl">CEDICT.jl</a>,
+          <a href="https://github.com/JuliaCJK/CJKFrequencies.jl">CJKFrequencies.jl</a>,
+          <a href="https://github.com/JuliaCJK/IDSGraphs.jl">IDSGraphs.jl</a>, and
+          <a href="https://github.com/JuliaCJK/UnifiedChineseDictionary.jl">UnifiedChineseDictionary.jl</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column is-half">
+    <div class="card">
+      <div class="card-content">
+        <h3 class="title is-5">Tabular DL Benchmark</h3>
+        <p>
+          A benchmark for deep learning-based approaches to learning over tabular datasets.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
