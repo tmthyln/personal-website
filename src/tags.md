@@ -6,11 +6,9 @@ import {data as tags} from './tags.data.js';
 
 # All Tags
 
-<span v-for="([tag, count], index) in tags" :key="tag" class="is-inline-flex is-align-items-center">
-  <BlogPostTagBadge :type="tag"></BlogPostTagBadge>
-  <span class="icon">
-    <i class="fa fa-times"></i>
-  </span>
-  {{ count }}
-  <span v-if="index < tags.size - 1" class="mr-3">, </span>
-</span>
+<div class="tags">
+  <div v-for="[tag, count] in tags" :key="tag" class="tags has-addons mb-2">
+    <BlogPostTagBadge :type="tag" />
+    <span class="tag is-rounded">{{ count }}</span>
+  </div>
+</div>

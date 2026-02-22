@@ -1,24 +1,13 @@
-import matter from 'gray-matter';
-import {globSync} from 'glob';
-import fs from 'node:fs';
+import { createContentLoader } from 'vitepress'
 
-export default {
-    load() {
-        return (globSync('posts/*.md'))
-            .map(filename => {
-                const file = fs.readFileSync(filename, 'utf8')
-                const { data } = matter(file)
-                return data.tags ?? []
+export default createContentLoader('posts/*.md', {
+    transform(rawData) {
+        const tagFreq = new Map<string, number>()
+        rawData.forEach(({ frontmatter }) => {
+            ;(frontmatter.tags ?? []).forEach((tag: string) => {
+                tagFreq.set(tag, (tagFreq.get(tag) ?? 0) + 1)
             })
-            .reduce((tagFreq, tags) => {
-                tags.forEach(tag => {
-                    if (tagFreq.has(tag)) {
-                        tagFreq.set(tag, tagFreq.get(tag) + 1)
-                    } else {
-                        tagFreq.set(tag, 1)
-                    }
-                })
-                return tagFreq
-            }, new Map<string, number>())
-    },
-}
+        })
+        return Array.from(tagFreq.entries()).sort(([a], [b]) => a.localeCompare(b))
+    }
+})

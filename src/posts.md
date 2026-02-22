@@ -1,5 +1,8 @@
 
-# Fragments of Lint{class="mb-6"}
+<div class="is-flex is-flex-wrap-wrap is-align-items-baseline is-justify-content-space-between mb-6">
+  <h1>Fragments of Lint</h1>
+  <a href="/tags">Browse by tag</a>
+</div>
 
 <script setup lang="ts">
 import {data} from './posts.data.ts';
