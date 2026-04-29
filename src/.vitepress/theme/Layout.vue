@@ -204,6 +204,10 @@ watch(
 </template>
 
 <style scoped>
+.footer {
+  padding: 1.5rem 1.5rem;
+}
+
 .post-description {
   font-size: 1.15rem;
   color: #444;
