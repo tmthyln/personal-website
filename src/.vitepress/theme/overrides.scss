@@ -29,3 +29,20 @@ div.custom-block > :not(:last-child) {
 .custom-block.danger {
     @extend .is-danger;
 }
+
+.content {
+    h1:not(:first-child),
+    span.is-align-items-self-start:has(> h2):not(:first-child) {
+        margin-top: 2.5em;
+    }
+
+    span.is-align-items-self-start:has(> h3):not(:first-child),
+    span.is-align-items-self-start:has(> h4):not(:first-child) {
+        margin-top: 2em;
+    }
+
+    span.is-align-items-self-start:has(> h5):not(:first-child),
+    span.is-align-items-self-start:has(> h6):not(:first-child) {
+        margin-top: 1.5em;
+    }
+}
