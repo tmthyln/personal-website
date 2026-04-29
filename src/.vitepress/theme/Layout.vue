@@ -214,6 +214,10 @@ watch(
   line-height: 1.6;
 }
 
+:global(html.dark) .post-description {
+  color: #e0e0e0;
+}
+
 .post-meta {
   display: flex;
   gap: 3rem;
