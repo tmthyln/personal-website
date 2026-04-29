@@ -19,6 +19,7 @@
     "feed": "^5.2.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-footnote": "^4.0.0",
+    "photoswipe": "^5.4.4",
     "video.js": "^8.23.4"
   },
   "devDependencies": {
